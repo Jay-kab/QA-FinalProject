@@ -1,0 +1,18 @@
+package com.jay.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+
+import com.jay.entity.Employee;
+
+
+
+@Repository
+public interface EmployeeRepository extends JpaRepository<Employee, String> {
+
+	public Employee findByUsernameAndPassword(String username, String password);
+	
+	
+
+}
